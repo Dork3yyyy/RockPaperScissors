@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #feca57;
+}
+#head {
+    margin-top: 30px;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.rock {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#table {
+    width: 200px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#scissors {
+    transition: 0.5s;
+}
+#scissors:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#rock {
+    transition: 0.5s;
+}
+#rock:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#paper {
+    transition: 0.5s;
+}
+#paper:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.pc {
+    width: 200px;
+    margin-left: 800px;
+    height: 80px;
+    margin-top: -80px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.Player {
+    width: 200px;
+    margin-left: 365px;
+    height: 80px;
+    margin-top: -80px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
