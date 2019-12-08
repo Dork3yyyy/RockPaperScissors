@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery Tutorial</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #feca57;
+}
+#head {
+    margin-top: 30px;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.rock {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#table {
+    width: 200px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#scissors {
+    transition: 0.5s;
+}
+#scissors:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#rock {
+    transition: 0.5s;
+}
+#rock:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+#paper {
+    transition: 0.5s;
+}
+#paper:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.pc {
+    width: 200px;
+    margin-left: 800px;
+    height: 80px;
+    margin-top: -80px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.Player {
+    width: 200px;
+    margin-left: 365px;
+    height: 80px;
+    margin-top: -80px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+</style>
+</head>
+<body>
+<center><div id="head">
+<h1 id="scissors">&#9996;</h1>
+<h1 id="rock">&#9994;</h1>
+<h1 id="paper">&#129306;</h1>
+</div></center>
+<center><div id="table">
+
+</div></center>
+<div class="PC">
+<h1>PC</h1>
+</div>
+<div class="Player">
+<h1>You</h1>
+</div>
+<script>
+const sci = document.getElementById('scissors');
+const ro = document.getElementById('rock');
+const pa = document.getElementById('paper');
+const head = document.getElementById('head');
+const table = document.getElementById('table');
+function srp() {
+    let aelement = document.createElement('a');   //randomnumber = 0 === scissors  = 1 === paper = 2 === rock
+    let point = 1;
+    let points = 1;
+    aelement.textContent = 0;
+    aelement.className = "player";
+    table.appendChild(aelement);
+    let aelem = document.createElement('a');
+    aelem.textContent = "-";
+    table.appendChild(aelem);
+    let ael3ment = document.createElement('a');
+    ael3ment.textContent = 0;
+    aelement.className = "pc1";
+    table.appendChild(ael3ment);
+    sci.addEventListener('click', function(){
+        randomnumber = Math.floor(Math.random()*3);
+        if(randomnumber == 1) {
+            aelement.textContent = point++;
+            console.log(aelement);
+        } else if (randomnumber == 2) {
+            ael3ment.textContent = points++;
+        } else {
+
+        }
+    })
+    ro.addEventListener('click', function(){
+        randomnumber = Math.floor(Math.random()*3);
+        if(randomnumber == 0) {
+            aelement.textContent = point++;
+        } else if (randomnumber == 2) {
+            ael3ment.textContent = points++;
+        } else {
+
+        }
+    })
+    pa.addEventListener('click', function(){
+        randomnumber = Math.floor(Math.random()*3);
+        if(randomnumber == 2) {
+            aelement.textContent = point++;
+        } else if(randomnumber == 0) {
+            ael3ment.textContent = points++;
+        } else {
+            
+        }
+    })
+}
+
+srp();
+</script>
+</body>
+</html>
